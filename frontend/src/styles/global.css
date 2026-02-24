@@ -1,0 +1,134 @@
+body {
+	margin: 0;
+	font-family: system-ui;
+	background: #111;
+	color: white;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 2rem;
+	background: #1a1a1a;
+}
+
+.navbar a {
+	margin-left: 1rem;
+	color: white;
+	text-decoration: none;
+}
+
+.page {
+	padding: 2rem;
+}
+
+.collection-grid,
+.media-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	gap: 1rem;
+}
+
+.collection-card,
+.media-card {
+	background: #222;
+	padding: 1rem;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+input {
+	padding: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.search-result-card {
+	display: flex;
+	gap: 1rem;
+	background: #222;
+	padding: 1rem;
+	border-radius: 8px;
+	margin-top: 1rem;
+}
+
+.search-result-card img {
+	width: 120px;
+	border-radius: 6px;
+}
+
+.results-list {
+	display: block;
+	margin-top: 1.5rem;
+}
+
+.result-item {
+	display: flex;
+	gap: 1.5rem;
+	padding: 1rem;
+	background: #222;
+	border-radius: 8px;
+	margin-bottom: 1rem;
+
+	animation: fadeInUp 0.3s ease forwards;
+}
+
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(8px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.result-item img {
+	width: 150px;
+	border-radius: 6px;
+}
+
+.result-info {
+	flex: 1;
+}
+
+.filter-bar {
+	display: flex;
+	gap: 1rem;
+	margin: 1rem 0;
+}
+
+.filter-bar select {
+	padding: 0.4rem;
+}
+
+.filter-bar button {
+	padding: 0.4rem 0.6rem;
+	background: #333;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.pagination {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.pagination button {
+	padding: 0.4rem 0.8rem;
+	background: #333;
+	border: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.pagination button:disabled {
+	opacity: 0.4;
+	cursor: default;
+}
